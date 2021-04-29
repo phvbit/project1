@@ -36,7 +36,7 @@ function TrendBar() {
       <div>
         <div className="search-bar d-flex align-bl">
           <i class=" fas fa-search"></i>
-          <input onChange={HandleSearchInputChange} onFocus={HandleSearchFocus} onBlur={HandleSearchFocusOut} className="" type="text" name="" id="search-bar" placeholder="Search Tweeter" />
+          <input onChange={HandleSearchInputChange} onFocus={HandleSearchFocus} onBlur={HandleSearchFocusOut} className="" type="text" name="" id="search-bar" placeholder="Search Twitter" />
         </div>
         <SearchResult />
 

@@ -1,0 +1,27 @@
+.country-card {
+    border-radius: 5px;
+    width: 150px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 0 2px 1px lightgray ;
+}
+.country-card:hover {
+    background-color: #F7F7F7;
+}
+.country-card img {
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+.country-card h4 {
+    margin: 0 0 10px 0;
+    font-size: 110%;
+}
+.country-card p {
+    margin: 0;
+}
+
+.country-info {
+    margin: 10px 0 10px 0;
+    padding: 0 10px;
+}
