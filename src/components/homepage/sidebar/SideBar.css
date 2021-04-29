@@ -1,0 +1,54 @@
+.side-bar {
+    position: fixed;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    z-index: 1;
+}
+/* Items */
+.side-bar-item {
+    font-size: 120%;
+    margin-bottom: 30px;
+}
+.side-bar a:hover {
+    background-color: #E8F5FE;
+}
+
+.side-bar  a {
+    color: inherit;
+    text-decoration: none;
+}
+.side-bar-item:not(:first-child) > a {
+    display: inline;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+.side-bar-item:nth-child(2) > div {
+    color: #1DA1F2;
+}
+/* Twitter logo */
+.side-bar-home-icon {
+    font-size: 130%;
+    margin-left: 5px;
+    margin-bottom: -10px;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+.side-bar-home-icon > span {
+    display: block;
+    color: #1DA1F2;
+    font-size: 110%;
+}
+/* Account Info */
+.bottom-side-bar {
+    cursor: pointer;
+    position: relative;
+    border-radius: 30px;
+    padding: 5px 10px 5px 20px;
+    margin-bottom: 20px;
+}
+.bottom-side-bar:hover {
+    background-color: #E8F5FE;
+}

@@ -1,0 +1,60 @@
+.signup-container {
+    /* visibility: hidden; */
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    /* background: #999999; */
+}
+.create-new {
+    background-color:#fff;
+    box-sizing: border-box;
+    width: 600px;
+    height: 600px;
+    padding: 10px 50px;
+    border-radius: 20px;
+    border: 1px solid #CBCBCB;
+}
+.create-new .form-floating {
+    margin: 30px 0;
+}
+
+#btn-next {
+    height: 40px;
+    margin-left: 35%;
+    width: 80px;
+    margin-right: -20px;
+}
+.create-new .login-icon {
+    font-size: 36px;
+    color: #1DA1F2;
+}
+.create-new .align-bl {
+    margin-top: 10px;
+}
+/* Use email or phone */
+.signup-container a:link, .signup-container a:visited {
+    text-decoration: none;
+    color: #1DA1F2;
+}
+
+
+
+/* select */
+.birth-sel .form-floating:not(:last-child) {
+    margin-right: 20px;
+}
+.create-new .d-flex:last-child {
+    margin-top: -20px;
+}
+
+
+.birth-sel div:nth-child(1) {
+    flex: 4;
+}
+.birth-sel div:nth-child(2) {
+    flex: 3;
+}
+.birth-sel div:nth-child(3) {
+    flex: 3;
+}
+

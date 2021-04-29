@@ -1,0 +1,6 @@
+.home > div {
+    flex-shrink: 0;
+}
+.home {
+    overflow: hidden;
+}

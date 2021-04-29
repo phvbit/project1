@@ -1,0 +1,47 @@
+.login-form {
+    margin: 0 auto;
+
+}
+.login-form .login-icon {
+    margin-top: 20px;
+    font-size: 36px;
+    color: #1DA1F2;
+}
+.login-form h3 {
+    font-size: 36px;
+    margin: 20px 0 10px;
+}
+
+.login-form > a {
+    display: block;
+    padding: 15px 0;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+}
+.login-form > a:focus {
+    box-shadow: 0px 0px 0px 1px #1B95E0;
+}
+.login-a a {
+    margin: 0 5px;
+}
+.login-a a:link {
+    text-decoration: none;
+    color: #1B95E0;
+}
+.login-a a:visited {
+    color: #1B95E0;
+    text-decoration: none;
+}
+.login-a a:focus {
+    text-decoration: 1px underline;
+    outline: none;
+}
+.login-a a:hover {
+    text-decoration: 1px underline;
+}
+.login-form .form-floating {
+    margin: 20px auto;
+}

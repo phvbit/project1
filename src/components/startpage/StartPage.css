@@ -1,0 +1,70 @@
+/* Container */
+.start-page-top-container {
+    position: absolute;
+    inset: 0 0 50px;
+}
+.start-page-top-l {
+    flex: 55%;
+    background-image: url(https://abs.twimg.com/sticky/illustrations/lohp_en_1302x955.png);
+
+}
+.start-page-top-r {
+    flex: 45%;
+    box-sizing: border-box;
+    padding: 20px 0 0 40px;
+}
+.start-page-top-r .form-floating {
+    margin-right: 20px;
+}
+
+/* ICON */
+.top-l-icon {
+    font-size: 360px;
+    color: white;
+}
+.t-icon {
+    font-size: 48px;
+    color: #0D6EFD;
+    margin: 50px 0;
+}
+/* Right container */
+
+
+.start-page-top-rh1 {
+    font-size: 64px;
+    margin: 0;
+}
+.start-page-top-r h3 {
+    font-size: 36px;
+}
+
+/* BUTTON */
+#start-page a:link {
+    text-decoration: none;
+}
+#start-page a:visited {
+    text-decoration: none;
+}
+#start-page-btn > button:last-child {
+    margin-top: 20px;
+}
+.start-page-top-r a {
+    display: block;
+    text-align: center;
+    border-radius: 30px;
+    padding: 15px 0;
+}
+
+/* Footer */
+#startpage-footer {
+    overflow-y: hidden;
+    color: #C4CFD6;
+    position: absolute;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+}
+
+

@@ -1,0 +1,49 @@
+.trigger {
+    position: relative;
+}
+.popup {
+  visibility: hidden;
+  position: absolute;
+  left: -20px;
+  bottom: 90px;
+  transform: translate(0);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  background: none;
+  border-radius: 20px;
+  width: 300px;
+}
+
+.popup:after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  transform: rotate(-45deg);
+  background: #fff;
+  position: absolute;
+  box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.5);
+  z-index: -1;
+  bottom: -10px;
+  left: calc(50% - 10px);
+}
+
+.inner {
+  /* border: 1px solid transparent; */
+  padding: 1px 0;
+  background: #fff;
+  border-radius: 20px;
+}
+.popup ul {
+  /* border: 1px solid blue; */
+  padding: 0;
+  list-style-type: none;
+}
+.inner li:not(:first-child):hover {
+  background-color: #F7F9FA;
+}
+.inner li:not(:first-child) {
+  border-top: 1px solid #EBEEF0;
+}
+
+.inner li {
+    padding: 10px 0 10px 30px;
+}
