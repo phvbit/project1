@@ -1,7 +1,6 @@
 .card-detail {
     background-color: #fff;
     position: fixed;
-    /* visibility: hidden; */
     top: 100px;
     width: 800px;
     height: 480px;
@@ -37,9 +36,6 @@
 }
 
 /* Info */
-
-
-
 .country-more > div {
     width: 180px;
 }
