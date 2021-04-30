@@ -2,11 +2,11 @@ import React from "react";
 import './CardDetail.css';
 
 function CardDetail(props) {
-    return(
+    return (
         <div className="card-detail">
             <button onClick={props.backClick} className="btn-outline-secondary"><i class="fas fa-arrow-left"></i> Back</button>
             <div className="d-flex js-btw align-bl">
-                <img src={props.flag} alt=""/>
+                <img src={props.flag} alt="" />
                 <div className="country-detail">
                     <h3>{props.name}</h3>
                     <div className="country-more d-flex js-btw">
@@ -23,9 +23,15 @@ function CardDetail(props) {
                             <p><strong>Language: </strong>{props.languages}</p>
                         </div>
                     </div>
+                    <div>
+                        <strong>Border Countries: </strong>
+                        {props.borderList.map((border) => (
+                            <button onClick={props.borderClick} className="btn-border btn-outline-secondary">{border}</button>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
     );
-} 
+}
 export default CardDetail;

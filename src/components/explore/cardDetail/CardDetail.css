@@ -1,7 +1,9 @@
+
 .card-detail {
     background-color: #fff;
     position: fixed;
     /* visibility: hidden; */
+    animation: popupmove .5s;
     top: 100px;
     width: 800px;
     height: 480px;
@@ -9,14 +11,25 @@
     box-shadow: 0 0 2px 2px lightgray;
     z-index: 1;
 }
+@keyframes popupmove {
+    from {top: -1000px;}
+    to {top: 100px;}
+}
 
 /* Button Back */
-.card-detail button {
+.card-detail button:first-child {
     padding: 8px 0;
     width: 100px;
     border-radius: 5px;
     margin: 30px 20px;
-
+}
+.btn-border {
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.country-detail {
+    margin-left: 20px;
 }
 
 .card-detail > div{
@@ -30,6 +43,7 @@
     margin: 5px 0;
 }
 
+
 .card-detail img {
     width: 360px;
     height: 240px;
@@ -38,8 +52,9 @@
 
 /* Info */
 
-
-
 .country-more > div {
     width: 180px;
+}
+.country-detail > div:last-child {
+    margin-top: 20px;
 }
