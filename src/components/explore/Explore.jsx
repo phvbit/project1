@@ -1,3 +1,4 @@
+// Commit branch 2
 import React, { useState, useEffect } from "react";
 import './Explore.css';
 import CountryCard from "./CountryCard";
@@ -51,6 +52,9 @@ function Explore() {
   }
   function HandleBackClick() {
     setCardClick(false);
+  }
+  function HandleBorderClick(event) {
+    setAlphaCode(`https://restcountries.eu/rest/v2/alpha/${event.target.innerHTML}`);
   }
 
   const [countryDetail, setCountryDetail] = useState({});
@@ -127,6 +131,10 @@ function Explore() {
       domain={countryDetail.topLevelDomain}
       currencies={countryDetail.currencies.map((currency) => (currency.code)).join(", ")}
       languages={countryDetail.languages.map((language) => (language.name)).join(", ")}
+
+      borderList={countryDetail.borders}
+      borderClick={HandleBorderClick}
+
       />}
 
     </div>
