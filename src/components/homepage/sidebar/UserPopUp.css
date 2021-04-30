@@ -1,8 +1,11 @@
 .trigger {
     position: relative;
 }
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
 .popup {
-  visibility: hidden;
   position: absolute;
   left: -20px;
   bottom: 90px;
@@ -11,6 +14,7 @@
   background: none;
   border-radius: 20px;
   width: 300px;
+  animation: fadeIn .5s;
 }
 
 .popup:after {
