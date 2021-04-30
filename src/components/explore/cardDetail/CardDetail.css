@@ -1,8 +1,6 @@
-/* Commit branch 2 */
 .card-detail {
     background-color: #fff;
     position: fixed;
-    /* visibility: hidden; */
     animation: popupmove .5s;
     top: 100px;
     width: 800px;
