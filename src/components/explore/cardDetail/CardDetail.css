@@ -1,0 +1,45 @@
+.card-detail {
+    background-color: #fff;
+    position: fixed;
+    /* visibility: hidden; */
+    top: 100px;
+    width: 800px;
+    height: 480px;
+    border-radius: 10px;
+    box-shadow: 0 0 2px 2px lightgray;
+    z-index: 1;
+}
+
+/* Button Back */
+.card-detail button {
+    padding: 8px 0;
+    width: 100px;
+    border-radius: 5px;
+    margin: 30px 20px;
+
+}
+
+.card-detail > div{
+    margin: 20px 20px;
+    font-size: 80%;
+}
+.country-detail h3 {
+    margin: 10px 0px;
+}
+.country-detail p {
+    margin: 5px 0;
+}
+
+.card-detail img {
+    width: 360px;
+    height: 240px;
+    object-fit: cover;
+}
+
+/* Info */
+
+
+
+.country-more > div {
+    width: 180px;
+}

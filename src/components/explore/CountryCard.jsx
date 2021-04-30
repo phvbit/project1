@@ -3,7 +3,7 @@ import './CountryCard.css';
 
 function CountryCard(props) {
     return (
-        <div className="country-card">
+        <div onClick={props.onClickHandle} className="country-card" id={props.id}>
             <img src={props.flag} alt="Flag" />
 
             <div className="country-info">
@@ -11,6 +11,7 @@ function CountryCard(props) {
                 <p><strong>Population: </strong>{props.pop}</p>
                 <p><strong>Region: </strong>{props.reg}</p>
                 <p><strong>Capital: </strong>{props.cap}</p>
+                <p className="alpha3Code" style={{visibility: "hidden"}}>{props.code}</p>
             </div>
 
         </div>

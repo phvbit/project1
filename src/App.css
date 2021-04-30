@@ -33,6 +33,9 @@ hr {
 .js-btw {
     justify-content: space-between;
 }
+.js-evenly {
+    justify-content: space-evenly;
+}
 .js-center {
     justify-content: center;
 }
@@ -94,6 +97,24 @@ hr {
     border: 1px solid #1A91DA;
     background-color: #DAE8F2;
     /* color: #fff; */
+}
+.btn-outline-dark {
+    border: 1px solid black;
+    background-color: #fff;
+}
+.btn-outline-dark:hover {
+    color: #fff;
+    background-color: black;
+}
+.btn-outline-secondary {
+    color: #6C757D;
+    border: 1px solid #6C757D;
+    background-color: #fff;
+}
+.btn-outline-secondary:hover {
+    color: #fff;
+    border: 1px solid #6C757D;
+    background-color: #6C757D;
 }
 
 .w-300 {

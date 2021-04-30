@@ -4,12 +4,11 @@ import CountryCard from "./CountryCard";
 import axios from "axios";
 import SideBar from "../homepage/sidebar/SideBar";
 import TrendBar from "../homepage/trendbar/TrendBar";
+import CardDetail from "./cardDetail/CardDetail";
 
 function Explore() {
+  // Explore
   const [api, setApi] = useState("https://restcountries.eu/rest/v2/all");
-  useEffect(() => {
-    console.log(api);
-  })
   function HandleSearchChange(event) {
     const searchValue = event.target.value;
     if (searchValue === "") {
@@ -27,8 +26,6 @@ function Explore() {
     else {
       setApi(`https://restcountries.eu/rest/v2/region/${regionValue}`);
     }
-
-
   }
   const [listCountry, setListCountry] = useState([]);
   useEffect(() => {
@@ -37,9 +34,37 @@ function Explore() {
         setListCountry(res.data);
       }).catch((err) => {
         console.log(err);
-        alert("ERROR.")
+        alert("ERROR.");
       })
   }, [api])
+
+  // Card Detail
+  const [isCardClick, setCardClick] = useState(false);
+
+
+  const [alphaCode, setAlphaCode] = useState("https://restcountries.eu/rest/v2/alpha/vnm");
+  function HandleOnClickCard(event) {
+    console.log("Click");
+    setCardClick(true);
+    const alpha3Code = event.currentTarget.id;
+    setAlphaCode(`https://restcountries.eu/rest/v2/alpha/${alpha3Code}`);
+  }
+  function HandleBackClick() {
+    setCardClick(false);
+  }
+
+  const [countryDetail, setCountryDetail] = useState({});
+  useEffect(() => {
+    axios.get(alphaCode)
+      .then((res) => {
+        setCountryDetail(res.data);
+      }).catch((err) => {
+        console.log(err);
+        alert("ERROR.");
+      })
+  }, [alphaCode])
+
+
 
   return (
     <div className="explore d-flex js-center">
@@ -73,17 +98,36 @@ function Explore() {
         <div className="country-area">
           {listCountry.map((country) => (
             <CountryCard
-              key={country.alpha3Code}
+              onClickHandle={HandleOnClickCard}
+              id={country.alpha3Code}
+              key={country.alpha2Code}
               flag={country.flag}
               name={country.name}
               pop={country.population}
               reg={country.region}
               cap={country.capital}
+              code={country.alpha3Code}
             />
           ))}
         </div>
       </div>
       <TrendBar />
+      {/* POPUP Detail */}
+      {isCardClick && <CardDetail
+      backClick={HandleBackClick}
+      key={countryDetail.alpha3Code}
+      flag={countryDetail.flag} 
+      name={countryDetail.name}
+      nativeName={countryDetail.nativeName}
+      pop={countryDetail.population}
+      reg={countryDetail.region}
+      subReg={countryDetail.subregion}
+      cap={countryDetail.capital}
+
+      domain={countryDetail.topLevelDomain}
+      currencies={countryDetail.currencies.map((currency) => (currency.code)).join(", ")}
+      languages={countryDetail.languages.map((language) => (language.name)).join(", ")}
+      />}
 
     </div>
 
