@@ -21,7 +21,6 @@ function Login() {
     else {
       alert("The username or password is incorrect\nadmin\nadmin");
       document.getElementById("btn-login").href = "#";
-
     }
   }
 
@@ -40,13 +39,11 @@ function Login() {
         };
       }
     });
-
   }
   return (
     <div className="login-form w-300">
       <i className="fab fa-twitter login-icon"></i>
       <h3>Log in to Twitter</h3>
-
       <div className="form-floating w-300">
         <input onChange={handleChange} className="form-control" type="text" name="id" id="floatingID2" placeholder="name@example.com" autoFocus />
         <label className="form-label" htmlFor="floatingID2">Phone, email, or username</label>

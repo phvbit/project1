@@ -5,12 +5,12 @@ import TrendBar from "./trendbar/TrendBar";
 import './Home.css';
 
 function Home() {
-    return (
-        <div className="home d-flex js-center">
-            <SideBar />
-            <NewFeed />
-            <TrendBar />
-        </div>
-    );
+  return (
+    <div className="home d-flex js-center">
+      <SideBar />
+      <NewFeed />
+      <TrendBar />
+    </div>
+  );
 }
 export default Home;

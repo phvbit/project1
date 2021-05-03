@@ -203,8 +203,6 @@ hr {
     box-shadow: 0px 0px 0px 1px #1DA1F2;
 
 }
-
-
 /* Select */
 .form-select {
     font-size: 1.1rem;
@@ -240,7 +238,6 @@ hr {
     box-shadow: 0px 0px 0px 1px #1DA1F2;
 
 }
-
 /* POP UP */
 @keyframes fadeIn {
     from {opacity: 0;}

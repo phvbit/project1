@@ -13,14 +13,12 @@ function TrendBar() {
     document.querySelector(".search-bar").style.borderColor = "#1DA1F2";
     document.querySelector(".search-bar").style.color = "#1DA1F2";
     document.querySelector(".search-bar").style.backgroundColor = "#fff";
-
   }
   function HandleSearchFocusOut() {
     document.getElementById("search-result").classList.toggle("show");
-    document.querySelector(".search-bar").style.borderColor = "#EBEEF0";
+    document.querySelector(".search-bar").style.borderColor = "#EBEEF0"; 
     document.querySelector(".search-bar").style.color = "#6c757d";
     document.querySelector(".search-bar").style.backgroundColor = "#EBEEF0";
-
   }
   function HandleSearchInputChange(event) {
     if(event.target.value === "") {
@@ -39,7 +37,6 @@ function TrendBar() {
           <input onChange={HandleSearchInputChange} onFocus={HandleSearchFocus} onBlur={HandleSearchFocusOut} className="" type="text" name="" id="search-bar" placeholder="Search Twitter" />
         </div>
         <SearchResult />
-
       </div>
       {/* Trend Bar */}
       <div className="trend-area">
@@ -58,7 +55,6 @@ function TrendBar() {
               />
               <i class="fas fa-ellipsis-h"></i>
             </li>
-
           ))}
           <li><p style={{ color: "#1DA1F2" }}>Show more</p></li>
         </ul>
@@ -77,14 +73,11 @@ function TrendBar() {
                 des={item.des}
               />
               <button className="btn w-80px btn-outline-twitter"><strong>Follow</strong></button>
-
             </li>
-
           ))}
           <li><p style={{ color: "#1DA1F2" }}>Show more</p></li>
         </ul>
       </div>
-
     </div>
   );
 }

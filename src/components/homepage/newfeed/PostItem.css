@@ -38,7 +38,6 @@
 }
 
 .react-item:last-child {
-    /* display: inline; */
     margin-right: 100px;
 }
 .react-item:hover > i {
@@ -46,9 +45,6 @@
 }
 .grid-bar {
     display: grid;
-    /* display: flex; */
     justify-content: space-between;
-    /* grid-auto-columns: min-content; */
-    /* grid-template-columns: auto auto auto auto; */
     grid-template-columns: min-content min-content min-content min-content;
 }

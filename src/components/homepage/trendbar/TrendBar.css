@@ -41,9 +41,6 @@
     padding: 0 10px 0 20px;
 }
 
-
-
-
 /* TREND */
 .trend-area {
     margin-top: 60px;
@@ -67,6 +64,7 @@
     border: none;
     border-radius: 0 0 20px 20px;
 }
+
 /* TOPIC */
 .trend-area:last-child {
     margin-top: 20px;

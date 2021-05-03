@@ -1,8 +1,7 @@
 .country-card {
     border-radius: 5px;
     width: 150px;
-    background-color: hsl(0, 0%, 100%);
-    box-shadow: 0 0 2px 1px lightgray ;
+    box-shadow: 0 0 2px 1px lightgray;
 }
 .country-card:hover {
     background-color: #F7F7F7;
