@@ -1,0 +1,21 @@
+.nf-popup img {
+  width: auto;
+  height: auto;
+  position: relative;
+  top: -30px;
+  /* border: 1px solid; */
+  z-index: -1;
+  margin-left: 50px;
+  animation: imgfadein .8s linear infinite alternate;
+}
+.nf-text {
+  font-size: 250%;
+  letter-spacing: 2px;
+  /* border: 1px solid; */
+  width: 350px;
+  color: gray;
+}
+@keyframes imgfadein {
+  from {top: -35px;}
+  to {top: -30px;}
+}

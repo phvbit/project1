@@ -6,6 +6,7 @@ import CountryCard from "./CountryCard";
 import SideBar from "../homepage/sidebar/SideBar";
 import TrendBar from "../homepage/trendbar/TrendBar";
 import CardDetail from "./cardDetail/CardDetail";
+import NotFound from "./cardDetail/NotFound";
 
 function Explore() {
   // Explore
@@ -30,6 +31,14 @@ function Explore() {
       setApi(`https://restcountries.eu/rest/v2/region/${regionValue}`);
     }
   }
+  // Not Found
+  const [isNotFound, setIsNotFound] = useState(false);
+  function HandleBackNotFound() {
+    setIsNotFound(false);
+  }
+
+
+
   // Get Countries by name API
   const [listCountry, setListCountry] = useState([]);
   useEffect(() => {
@@ -38,7 +47,8 @@ function Explore() {
         setListCountry(res.data);
       }).catch((err) => {
         console.log(err);
-        alert("ERROR.");
+        setIsNotFound(true);
+        // alert("ERROR.");
       })
   }, [api])
   // Card Detail
@@ -66,7 +76,8 @@ function Explore() {
         setCountryDetail(res.data);
       }).catch((err) => {
         console.log(err);
-        alert("ERROR.");
+        setIsNotFound(true);
+        // alert("ERROR.");
       })
   }, [alphaCode])
   // Add comma to population
@@ -154,6 +165,8 @@ function Explore() {
         borderList={countryDetail.borders}
         borderClick={HandleBorderClick}
       />}
+      {isNotFound && <NotFound backClick={HandleBackNotFound} />}
+
     </div>
   );
 }
