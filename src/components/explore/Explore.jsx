@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
 import './Explore.css';
 import CountryCard from "./CountryCard";
 import SideBar from "../homepage/sidebar/SideBar";
@@ -36,8 +35,6 @@ function Explore() {
   function HandleBackNotFound() {
     setIsNotFound(false);
   }
-
-
 
   // Get Countries by name API
   const [listCountry, setListCountry] = useState([]);
@@ -98,13 +95,12 @@ function Explore() {
     setDarkMode(!enableDarkMode);
   }
 
-
   return (
-    <div className="explore d-flex js-center">
+    <div className="explore-page d-flex js-center">
       <SideBar />
-      <div className="explore-area">
-        <div className="explore-top-fixed">
-          <div className="explore-top d-flex js-btw align-bl">
+      <div className="explore">
+        <div className="e-top">
+          <div className="e-top-title d-flex js-btw align-bl">
             <h3>Where in the world</h3>
             <button onClick={ToogleDarkMode} className="btn-darkmode btn-outline-secondary">
               <i class="far fa-moon"></i>
@@ -112,8 +108,8 @@ function Explore() {
             </button>
           </div>
 
-          <div className="explore-search d-flex js-btw align-bl">
-            <div className="explore-search-bar">
+          <div className="e-search d-flex js-btw align-bl">
+            <div className="e-search-bar">
               <i class="fas fa-search"></i>
               <input onChange={HandleSearchChange} type="text" placeholder="Search for a country" />
             </div>
@@ -128,7 +124,7 @@ function Explore() {
           </div>
         </div>
 
-        <div className="country-area">
+        <div className="e-country">
           {listCountry.map((country) => (
             <CountryCard
               onClickHandle={HandleOnClickCard}
@@ -166,7 +162,6 @@ function Explore() {
         borderClick={HandleBorderClick}
       />}
       {isNotFound && <NotFound backClick={HandleBackNotFound} />}
-
     </div>
   );
 }

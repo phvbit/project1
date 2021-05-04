@@ -24,16 +24,22 @@
 .post-r p {
     word-wrap: break-word;
 }
-.grid-bar i {
+/* React POST */
+.react-bar {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: min-content min-content min-content min-content;
+}
+.react-bar i {
     margin-right: 5px;
     width: 30px;
     height: 30px;
     border-radius: 50%;    
 }
-.grid-bar i:last-child {
+.react-bar i:last-child {
     margin-right: 0;
 }
-.grid-bar div:hover {
+.react-bar div:hover {
     color: #1DA1F2;
 }
 
@@ -42,9 +48,4 @@
 }
 .react-item:hover > i {
     background-color: #E1EEF7;
-}
-.grid-bar {
-    display: grid;
-    justify-content: space-between;
-    grid-template-columns: min-content min-content min-content min-content;
 }

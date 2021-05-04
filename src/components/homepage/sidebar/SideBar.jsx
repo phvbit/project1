@@ -12,12 +12,7 @@ function SideBar() {
       if (!isDisplay) {
         setIsDisplay(true);
         document.getElementById("user-test").style.zIndex = "-1";
-
       }
-      // else {
-      //   document.getElementById("popup").classList.remove("show");
-      //   setIsDisplay(false);
-      // }
     }
     document.getElementById("user-test").addEventListener("click", TooglePopUp);
     isDisplay &&
@@ -37,7 +32,6 @@ function SideBar() {
             </a>
           </div>
           {sideBarListItems.map(item => (
-
             <div className="side-bar-item">
               <SideBarItem
                 key={item.id}
@@ -47,7 +41,6 @@ function SideBar() {
               />
             </div>
           ))}
-
           <button className="btn w-90 btn-twitter">Tweet</button>
         </div>
         <div className="trigger">

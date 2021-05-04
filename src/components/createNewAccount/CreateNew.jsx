@@ -5,7 +5,6 @@ import yearList from "./year";
 
 function CreateNew() {
   const [useInstead, setInstead] = useState("true");
-
   function UseInstead() {
     setInstead(!useInstead);
   }
@@ -47,14 +46,12 @@ function CreateNew() {
   })
 
   const [endDate, setEndDate] = useState();
-
   var dateList = [];
   var date = 1;
   while (date <= endDate) {
     dateList.push(date);
     date ++;
   }
-  // display year
 
   return (
     <div className="signup-container d-flex js-center align-bl">
@@ -106,9 +103,7 @@ function CreateNew() {
           </div>
         </div>
       </div>
-
     </div>
-
   );
 }
 export default CreateNew;

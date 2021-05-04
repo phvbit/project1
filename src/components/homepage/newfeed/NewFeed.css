@@ -5,10 +5,10 @@
     border-top: none;
     margin-left: 250px;
 }
-.home-new-feed h3 {
+.top-nf h3 {
     margin: 0;
 }
-.home-new-feed {
+.top-nf {
     padding: 10px 20px;
 }
 .fixed-h {
@@ -19,4 +19,8 @@
     border-bottom: 1px solid #EBEEF0;
     height: 50px;
     background-color: #fff;
+}
+/* POST */
+.post {
+    margin-top: 50px;
 }

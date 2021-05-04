@@ -18,6 +18,8 @@ hr {
 .text-muted {
     color: #6c757d!important;
 }
+
+/* Flexbox and Grid */
 .d-flex {
     display: flex;
 }
@@ -46,7 +48,7 @@ hr {
     justify-content: flex-end;
 }
 
-
+/* Button */
 .btn {
     height: 50px;
     border-radius: 25px;
@@ -81,15 +83,6 @@ hr {
     border: 1px solid #8ED0F9;
     background-color: #8ED0F9;
 }
-.disabled {
-    border: 1px solid #8ED0F9;
-    background-color: #8ED0F9;
-    pointer-events: none;
-    cursor: default;
-}
-.hidden {
-    visibility: hidden;
-}
 .btn-outline-twitter {
     border: 1px solid #1DA1F2;
     background-color: #fff;
@@ -98,7 +91,6 @@ hr {
 .btn-outline-twitter:hover {
     border: 1px solid #1A91DA;
     background-color: #DAE8F2;
-    /* color: #fff; */
 }
 .btn-outline-dark {
     border: 1px solid black;
@@ -115,30 +107,15 @@ hr {
 }
 .btn-outline-secondary:hover {
     color: #fff;
-    border: 1px solid #6C757D;
     background-color: #6C757D;
 }
 
+/* Width */
 .w-300 {
     width: 300px;
 }
-.w-200 {
-    width: 200px;
-}
-.w-250 {
-    width: 250px;
-}
 .w-180 {
     width: 180px;
-}
-.w-180px {
-    width: 180px;
-}
-.w-100px {
-    width: 100px;
-}
-.w-80px {
-    width: 80px;
 }
 .w-100 {
     width: 100%;
@@ -146,24 +123,10 @@ hr {
 .w-90 {
     width: 90%;
 }
-
-.h-50px {
-    height: 50px;
-}
-.h-30px {
-    height: 30px;
-}
-.h-100 {
-    height: 100%;
-}
-
-
-
 /* Form Control */
 .form-floating {
     position: relative;
 }
-
 .form-control {
     font-size: 1.1rem;
     user-select: none;
@@ -203,7 +166,6 @@ hr {
 .form-control:focus {
     border: 1px solid #1DA1F2;
     box-shadow: 0px 0px 0px 1px #1DA1F2;
-
 }
 /* Select */
 .form-select {
@@ -229,7 +191,6 @@ hr {
     top: 8px;
     left: 0;
 }
-
 .form-select:focus + .form-label {
     color: #1DA1F2;
     font-size: 80%;
@@ -238,7 +199,6 @@ hr {
 .form-select:focus {
     border: 1px solid #1DA1F2;
     box-shadow: 0px 0px 0px 1px #1DA1F2;
-
 }
 /* POP UP */
 @keyframes fadeIn {
@@ -248,4 +208,29 @@ hr {
 .show {
     visibility: visible !important;
     animation: fadeIn .5s;
+}
+.disabled {
+    border: 1px solid #8ED0F9;
+    background-color: #8ED0F9;
+    pointer-events: none;
+    cursor: default;
+}
+.hidden {
+    visibility: hidden;
+}
+
+/* Responsive */
+@media only screen and (max-width: 1500px) {
+    .side-bar-item strong, .trend-bar {
+        display: none;
+    }
+    .side-bar {
+        width: 70px !important;
+    }
+    #new-feed, .explore-area {
+        margin-left: 70px !important;
+    }
+    .trigger {
+        display: none;
+    }
 }

@@ -19,7 +19,7 @@ function PostItem(props) {
 
         <p>{props.post}</p>
         <img src={props.postImg} alt="Post image" />
-        <div className="grid-bar">
+        <div className="react-bar">
           <div className="react-item d-flex align-bl">
             <i class="d-flex align-bl js-center far fa-comment"></i>
             <span>23</span>
