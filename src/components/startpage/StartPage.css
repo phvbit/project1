@@ -39,11 +39,7 @@
 .btn-login {
     width: 100px;
 }
-
-#sp a:link {
-    text-decoration: none;
-}
-#sp a:visited {
+#sp-btn a:link, #sp-btn a:visited {
     text-decoration: none;
 }
 #sp-btn > button:last-child {
