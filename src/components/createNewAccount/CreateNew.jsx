@@ -1,27 +1,60 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './CreateNew.css';
 import monthList from "./date";
+import yearList from "./year";
 
 function CreateNew() {
-  const [getMonth, setMonth] = useState("");
   const [useInstead, setInstead] = useState("true");
-  console.log(getMonth);
-  console.log(useInstead);
-  var isFeb;
+
   function UseInstead() {
     setInstead(!useInstead);
   }
-  if (getMonth === "feb") {
-    isFeb = true;
-  }
-  else {
-    isFeb = false;
+
+  const [isLeapYear, setIsLeapYear] = useState(false);
+  function ChangYear(event) {
+    const year = event.target.value;
+    if (year % 400 === 0) {
+      setIsLeapYear(true);
+    }
+    else if (year % 4 === 0 && year % 100 !== 0) {
+      setIsLeapYear(true);
+    }
+    else {
+      setIsLeapYear(false);
+    }
   }
 
+  const [getMonth, setMonth] = useState("");
   function ChangeMonth(event) {
     const month = event.target.value;
     setMonth(month);
   }
+  useEffect(() => {
+    if (['apr', 'jun', 'sep', 'nov'].includes(getMonth)) {
+      setEndDate(30);
+    }
+    else if (getMonth === 'feb') {
+      if (isLeapYear) {
+        setEndDate(28);
+      }
+      else {
+        setEndDate(29);
+      }
+    }
+    else {
+      setEndDate(31);
+    }
+  })
+
+  const [endDate, setEndDate] = useState();
+
+  var dateList = [];
+  var date = 1;
+  while (date <= endDate) {
+    dateList.push(date);
+    date ++;
+  }
+  // display year
 
   return (
     <div className="signup-container d-flex js-center align-bl">
@@ -45,7 +78,7 @@ function CreateNew() {
         <div className="birth-sel d-flex">
           <div className="form-floating">
             <select onChange={ChangeMonth} className="form-select" name="month" id="#month-sel">
-              <option value="">Month</option>
+              <option value="">Select Month</option>
               {monthList.map(item => (
                 <option key={item.id} value={item.value}>{item.month}</option>
               ))}
@@ -55,18 +88,19 @@ function CreateNew() {
           </div>
           <div className="form-floating">
             <select className="form-select" name="date" id="#date-sel">
-              <option value="">Date</option>
-              {isFeb && (
-                <option value="28">28</option>
-              )}
+              <option value="">Select Date</option>
+              {dateList.map(date => (
+                <option key={date} value={date}>{date}</option>
+              ))}
             </select>
             <label className="form-label" htmlFor="date-sel">Date</label>
           </div>
           <div className="form-floating">
-            <select className="form-select" name="year" id="#year-sel">
-              <option value="">Year</option>
-              <option value="2002">2002</option>
-
+            <select onChange={ChangYear} className="form-select" name="year" id="#year-sel">
+              <option value="">Select Year</option>
+              { yearList.map(year => (
+                <option key={year} value={year}>{year}</option>
+              ))}
             </select>
             <label className="form-label" htmlFor="year-sel">Year</label>
           </div>

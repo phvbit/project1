@@ -86,7 +86,9 @@ hr {
     background-color: #8ED0F9;
     pointer-events: none;
     cursor: default;
-
+}
+.hidden {
+    visibility: hidden;
 }
 .btn-outline-twitter {
     border: 1px solid #1DA1F2;

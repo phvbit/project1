@@ -27,6 +27,35 @@ const monthList = [
         id: 6,
         value: "jun",
         month: "June"
-    }
+    },
+    {
+        id: 7,
+        value: "jul",
+        month: "July"
+    },
+    {   id: 8,
+        value: "aug",
+        month: "August"
+    },
+    {
+        id: 9,
+        value: "sep",
+        month: "September"
+    },
+    {
+        id: 10,
+        value: "oct",
+        month: "October"
+    },
+    {
+        id: 11,
+        value: "nov",
+        month: "November"
+    },
+    {
+        id: 12,
+        value: "dec",
+        month: "December"
+    },
 ]
 export default monthList;
