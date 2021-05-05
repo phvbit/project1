@@ -219,6 +219,12 @@ hr {
     visibility: hidden;
 }
 
+
+
+/* TEXT */
+.short-text {
+    display: none;
+}
 /* Responsive */
 @media only screen and (max-width: 1500px) {
     .side-bar-item strong, .trend-bar {
@@ -232,5 +238,11 @@ hr {
     }
     .trigger {
         display: none;
+    }
+    .full-text {
+        display: none;
+    }
+    .short-text {
+        display: inline;
     }
 }

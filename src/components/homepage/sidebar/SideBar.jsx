@@ -41,7 +41,7 @@ function SideBar() {
               />
             </div>
           ))}
-          <button className="btn w-90 btn-twitter">Tweet</button>
+          <button className="btn w-90 btn-twitter"><span className="full-text">Tweet</span><i class="short-text fas fa-feather-alt"></i></button>
         </div>
         <div className="trigger">
           {isDisplay && <UserPopUp />} 
@@ -59,7 +59,6 @@ function SideBar() {
         </div>
       </div>
     </div>
-
   );
 }
 export default SideBar;

@@ -2,13 +2,13 @@ import React from "react";
 import ReactDOM from 'react-dom';
 import Footer from "./Footer";
 import footerItems from "./footerItems.js";
-import CreateNew from "../createNewAccount/CreateNew";
+import SignUp from "../signup/SignUp";
 import './StartPage.css';
 
 function Home() {
   function HandleSignUp() {
     const element = (
-      <CreateNew />
+      <SignUp />
     );
     ReactDOM.render(element, document.getElementById("popup-signin"));
   }

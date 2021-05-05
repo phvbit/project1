@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import './CreateNew.css';
+import './SignUp.css';
 import monthList from "./date";
 import yearList from "./year";
 
-function CreateNew() {
+function SignUp() {
   const [useInstead, setInstead] = useState("true");
   function UseInstead() {
     setInstead(!useInstead);
@@ -106,4 +106,4 @@ function CreateNew() {
     </div>
   );
 }
-export default CreateNew;
+export default SignUp;

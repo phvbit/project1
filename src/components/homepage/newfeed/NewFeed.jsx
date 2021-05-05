@@ -1,4 +1,6 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+
 import './NewFeed.css';
 import PostItem from "./PostItem";
 import postItems from "./postItems";
@@ -16,6 +18,8 @@ function NewFeed() {
       <div className="post">
         {postItems.map(item => (
           <PostItem
+            id={`post${item.id}`}
+          
             key={item.id}
             opImg={item.opImg}
             name={item.name}

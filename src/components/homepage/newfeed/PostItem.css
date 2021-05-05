@@ -1,9 +1,13 @@
 .post-item {
+    cursor: pointer;
     border-bottom: 1px solid #EBEEF0 ;
     padding: 10px 20px;
 }
 .post-item:hover {
     background-color: #F7F7F7;
+}
+.post-l {
+    position: relative;
 }
 .post-l img{
     width: 60px;
@@ -48,4 +52,42 @@
 }
 .react-item:hover > i {
     background-color: #E1EEF7;
+}
+
+/* Account info */
+.acc-info {
+    visibility: hidden;
+    position: absolute;
+    top: 70px;
+    left: -120px;
+    background-color: #fff;
+    box-sizing: border-box;
+    width: 300px;
+    height: 220px;
+    box-shadow: 0 0 5px 2px lightgray;
+    border-radius: 20px;
+    padding: 20px;
+    z-index: 1;
+}
+.top-info  p {
+    margin: 0;
+}
+.btn-if-follow {
+    cursor: pointer;
+    width: 100px;
+    padding: 12px 0;
+    border-radius: 20px;
+    color: #fff;
+    border: none;
+    background-color: #1DA1F2;
+}
+.btn-if-follow:hover {
+    background-color: #CA2055;
+
+}
+.btn-if-follow::after {
+    content: "Following";
+}
+.btn-if-follow:hover::after {
+    content: "Unfollow";
 }

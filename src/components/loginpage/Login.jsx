@@ -4,8 +4,6 @@ import './Login.css';
 function Login() {
   const [user, setUser] = useState({ id: "", pass: "" });
   useEffect(() => {
-    console.log(user.id);
-    console.log(user.pass);
     if (user.id === "" || user.pass === "") {
       document.getElementById("btn-login").classList.add("disabled");
     }
