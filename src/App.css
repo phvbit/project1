@@ -233,7 +233,7 @@ hr {
     .side-bar {
         width: 70px !important;
     }
-    #new-feed, .explore-area {
+    .new-feed, .explore {
         margin-left: 70px !important;
     }
     .trigger {
