@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import './Explore.css';
-import CountryCard from "./CountryCard";
 import SideBar from "../homepage/sidebar/SideBar";
 import TrendBar from "../homepage/trendbar/TrendBar";
 import CardDetail from "./cardDetail/CardDetail";
 import NotFound from "./cardDetail/NotFound";
+
+import ExploreCountry from './ExploreCountry';
+import CountryFilterContext from "../context/countryFilter-context";
+import CountryContext from "../context/country-context";
 
 function Explore() {
   // Explore
@@ -99,48 +102,12 @@ function Explore() {
     <div className="explore-page d-flex js-center">
       <SideBar />
       <div className="explore">
-        <div className="e-top">
-          <div className="e-top-title d-flex js-btw align-bl">
-            <h3>Where in the world</h3>
-            <button onClick={ToogleDarkMode} className="btn-darkmode btn-outline-secondary">
-              <i class="far fa-moon"></i>
-              <span>Dark mode</span>
-            </button>
-          </div>
-
-          <div className="e-search d-flex js-btw align-bl">
-            <div className="e-search-bar">
-              <i class="fas fa-search"></i>
-              <input onChange={HandleSearchChange} type="text" placeholder="Search for a country" />
-            </div>
-            <select onChange={HandleRegionChange} name="region-sel" id="region-sel">
-              <option value="default">Filter by region</option>
-              <option value="africa">Afica</option>
-              <option value="americas">Americas</option>
-              <option value="asia">Asia</option>
-              <option value="europe">Europe</option>
-              <option value="oceania">Oceania</option>
-            </select>
-          </div>
-        </div>
-
-        <div className="e-country">
-          {listCountry.map((country) => (
-            <CountryCard
-              onClickHandle={HandleOnClickCard}
-              id={country.alpha3Code}
-              key={country.alpha2Code}
-              flag={country.flag}
-              name={country.name}
-              pop={addCommas(country.population)}
-              reg={country.region}
-              cap={country.capital}
-              code={country.alpha3Code}
-            />
-          ))}
-        </div>
+        <CountryContext.Provider value={{listCountry: listCountry, handleOnClickCard: HandleOnClickCard, addCommas: addCommas}}>
+          <CountryFilterContext.Provider value={{ toggleDarkMode: ToogleDarkMode, handleSearchChange: HandleSearchChange, handleRegionChange: HandleRegionChange }}>
+            <ExploreCountry />
+          </CountryFilterContext.Provider>
+        </CountryContext.Provider>
       </div>
-      
       <TrendBar />
       {/* POPUP Detail */}
       {isCardClick && <CardDetail
