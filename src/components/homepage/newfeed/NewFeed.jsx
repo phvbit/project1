@@ -1,11 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-
 import './NewFeed.css';
 import PostItem from "./PostItem";
 import postItems from "./postItems";
 
 function NewFeed() {
+
+
   return (
     <div id="new-feed" className="new-feed">
       <div className="fixed-h">
@@ -19,7 +19,6 @@ function NewFeed() {
         {postItems.map(item => (
           <PostItem
             id={`post${item.id}`}
-          
             key={item.id}
             opImg={item.opImg}
             name={item.name}
@@ -30,7 +29,6 @@ function NewFeed() {
         ))}
       </div>
     </div>
-
   );
 }
 export default NewFeed;

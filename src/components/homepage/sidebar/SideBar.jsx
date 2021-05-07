@@ -45,7 +45,7 @@ function SideBar() {
         </div>
         <div className="trigger">
           {isDisplay && <UserPopUp />} 
-          <a id="user-test" className="bottom-side-bar d-flex align-bl js-btw">
+          <div id="user-test" className="bottom-side-bar d-flex align-bl js-btw">
             <div className=" d-flex align-bl">
               <i class="fas fa-user"></i>
               <div>
@@ -55,7 +55,7 @@ function SideBar() {
               </div>
             </div>
             <span class="fas fa-ellipsis-h"></span>
-          </a>
+          </div>
         </div>
       </div>
     </div>

@@ -43,7 +43,7 @@ function SignUp() {
     else {
       setEndDate(31);
     }
-  })
+  }, [getMonth, isLeapYear])
 
   const [endDate, setEndDate] = useState();
   var dateList = [];
@@ -69,7 +69,7 @@ function SignUp() {
           <input className="form-control" type="text" name="contact" id="create-phone" placeholder="password" />
           <label className="form-label" htmlFor="create-phone">{useInstead ? "Phone" : "Email"}</label>
         </div>
-        <a onClick={UseInstead} id="use-instead" href="#">{useInstead ? "Use email instead" : "Use phone instead"}</a>
+        <p style={{color: "#1DA1F2"}} onClick={UseInstead} id="use-instead" href="#">{useInstead ? "Use email instead" : "Use phone instead"}</p>
         <strong><p>Date of birth</p></strong>
         <p>This will not be shown publicly. Confirm your own age, even if this account is for a business, a pet, or something else.</p>
         <div className="birth-sel d-flex">

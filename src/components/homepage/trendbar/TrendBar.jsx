@@ -3,7 +3,6 @@ import TrendItem from "./TrendItem";
 import trendItems from "./trendItems";
 import SearchResult from "./SearchResult";
 import './TrendBar.css';
-import postItems from "../newfeed/postItems";
 import topicListItems from "./topicListItems";
 import TopicItem from "./TopicItem";
 
@@ -25,7 +24,7 @@ function TrendBar() {
       document.getElementById("search-for").innerHTML = "Try searching for people, topics, or keywords";
     }
     else
-    document.getElementById("search-for").innerHTML = "Search for " + "\"" + event.target.value + "\"";
+    document.getElementById("search-for").innerHTML = `Search for "${event.target.value}"`;
   }
 
   return (

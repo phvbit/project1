@@ -30,13 +30,13 @@ function Home() {
                 <input className="form-control" type="password" name="" id="floatingPass" placeholder="password" />
                 <label className="form-label" htmlFor="floatingPass">Password</label>
               </div>
-              <a className="btn-outline-primary btn-login">Log in</a>
+              <a href="home" className="btn-outline-primary btn-login">Log in</a>
             </div>
             <i className="fab fa-twitter t-icon"></i>
             <h1>Happening now</h1>
             <h3>Join Twitter today.</h3>
             <div id="sp-btn">
-              <a onClick={HandleSignUp} className="w-300 btn-primary">Sign up</a><br/>
+              <a href="/signup" onClick={HandleSignUp} className="w-300 btn-primary">Sign up</a><br/>
               <a href="/login" className="w-300 btn-outline-primary">Log in</a>
             </div>
           </div>

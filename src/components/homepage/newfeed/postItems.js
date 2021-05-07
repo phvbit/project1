@@ -12,6 +12,7 @@ const postItems = [
         opImg: "https://pbs.twimg.com/profile_images/1085020880856641537/j5RvL6nm_400x400.jpg",
         name: "Tara Westover",
         username: "tarawestover",
+        // post: `One of the most important books I've read in a very long time.\nHello fgadsf sdfdsfasd fasdf`,
         post: ["One of the most important books I've read in a very long time.",<br/>,"If you're interested in the effect of technology and digital culture on selfhood and creativity, this is the book for you."],
         postImg: "https://pbs.twimg.com/media/D89HGeUWwAAivis?format=jpg&name=4096x4096"
     },

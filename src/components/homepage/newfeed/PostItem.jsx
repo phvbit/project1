@@ -1,8 +1,9 @@
 import React from "react";
 import './PostItem.css';
-// import 
+import propTypes from 'prop-types';
 
 function PostItem(props) {
+
   var id;
   function ImgOpMouseEnter(event) {
     id = `${event.target.id}-info`
@@ -29,11 +30,11 @@ function PostItem(props) {
   return (
     <div className="post-item d-flex">
       <div className="post-l" id="post-l">
-        <img id={props.id} onMouseEnter={ImgOpMouseEnter} onMouseLeave={ImgOpMouseLeave} src={props.opImg} alt="profile picture" />
+        <img id={props.id} onMouseEnter={ImgOpMouseEnter} onMouseLeave={ImgOpMouseLeave} src={props.opImg} alt="profile pic" />
         <div id={`${props.id}-info`}  onMouseEnter={AccInfoMouseEnter} onMouseLeave={AccInfoMouseLeave} className="acc-info">
           <div className="top-info d-flex js-btw">
             <div className="top-info-l">
-              <img src={props.opImg} alt="Photo" /><br />
+              <img src={props.opImg} alt="OPImg" /><br />
               <strong>{props.name}</strong>
               <p>@{props.username}</p>
             </div>
@@ -54,7 +55,7 @@ function PostItem(props) {
           <span class="more fas fa-ellipsis-h"></span>
         </div>
         <p>{props.post}</p>
-        <img onClick={HandleClickImg} src={props.postImg} alt="Post image" />
+        <img onClick={HandleClickImg} src={props.postImg} alt="PostImg" />
         <div className="react-bar">
           <div className="react-item d-flex align-bl">
             <i class="d-flex align-bl js-center far fa-comment"></i>
@@ -76,4 +77,13 @@ function PostItem(props) {
     </div>
   );
 }
+PostItem.propTypes = {
+  id: propTypes.string,
+  opImg: propTypes.string,
+  name: propTypes.string,
+  username: propTypes.string,
+  // post: propTypes.string,
+  postImg: propTypes.string
+}
 export default PostItem;
+

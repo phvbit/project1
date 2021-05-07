@@ -50,9 +50,9 @@ function Login() {
         <input onChange={handleChange} className="form-control" type="password" name="pass" id="floatingPass2" placeholder="password" />
         <label className="form-label" htmlFor="floatingPass2">Password</label>
       </div>
-      <a href="#" onClick={HandleLogin} id="btn-login" className="w-300 btn-primary">Log in</a>
+      <a href="/" onClick={HandleLogin} id="btn-login" className="w-300 btn-primary">Log in</a>
       <div className="w-300 center login-a">
-        <a href="#">Forgot password?</a>
+        <a href="/forgot">Forgot password?</a>
         <a href="/signup">Sign up for Twitter</a>
       </div>
     </div>
