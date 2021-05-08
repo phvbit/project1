@@ -32,9 +32,8 @@
     margin-top: 10px;
 }
 /* Use email or phone */
-.signup-container a:link, .signup-container a:visited {
-    text-decoration: none;
-    color: #1DA1F2;
+#use-instead {
+    cursor: pointer;
 }
 
 

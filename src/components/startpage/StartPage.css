@@ -36,6 +36,9 @@
 }
 
 /* BUTTON */
+a {
+    text-decoration: none;
+}
 .btn-login {
     width: 100px;
 }
