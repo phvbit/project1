@@ -19,9 +19,11 @@
 }
 
 #btn-next {
-    height: 40px;
+    padding: 8px 0 10px;
+    border-radius: 20px;
+    text-align: center;
     margin-left: 35%;
-    width: 80px;
+    width: 70px;
     margin-right: -20px;
 }
 .create-new .login-icon {
@@ -34,8 +36,8 @@
 /* Use email or phone */
 #use-instead {
     cursor: pointer;
+    display: inline;
 }
-
 
 
 /* select */
@@ -45,7 +47,6 @@
 .create-new .d-flex:last-child {
     margin-top: -20px;
 }
-
 
 .birth-sel div:nth-child(1) {
     flex: 4;
